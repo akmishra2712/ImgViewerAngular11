@@ -2,13 +2,62 @@
   <div class="img-viewer-panel">
     <div class="img-viewer-panel-header">
       <div *ngIf="showOperate" class="img-viewer-panel-header-operation">
-        <span *ngIf="zoom" (click)="zoomInImg()">+</span>
-        <span *ngIf="zoom" (click)="zoomOutImg()">-</span>
-        <span *ngIf="rotate" (click)="rotateImg(false)">RL</span>
-        <span *ngIf="rotate" (click)="rotateImg(true)">RR</span>
-        <span *ngIf="reset" (click)="showImg()">Reset</span>
-        <span *ngIf="fullscreen" (click)="fullscreenImg()">FS</span>
-        <span *ngIf="download" (click)="downloadImg()">D</span>
+        <span *ngIf="zoom" (click)="zoomInImg()">
+          <img
+            src="../../assets/icons/zoom-in.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="zoom" (click)="zoomOutImg()">
+          <img
+            src="../../assets/icons/zoom-out.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="rotate" (click)="rotateImg(false)">
+          <img
+            src="../../assets/icons/counter-clockwise.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="rotate" (click)="rotateImg(true)">
+          <img
+            src="../../assets/icons/clockwise.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="reset" (click)="showImg()">
+          <img
+            src="../../assets/icons/reset.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="fullscreen" (click)="fullscreenImg()">
+          <img
+            src="../../assets/icons/fullscreen.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
+        <span *ngIf="download" (click)="downloadImg()">
+          <img
+            src="../../assets/icons/download.svg"
+            alt=""
+            width="16"
+            height="16"
+          />
+        </span>
       </div>
     </div>
     <div
