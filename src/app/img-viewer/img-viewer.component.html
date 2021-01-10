@@ -1,0 +1,36 @@
+<div class="img-viewer {{ imgViewerClass }}">
+  <div class="img-viewer-panel">
+    <div class="img-viewer-panel-header">
+      <div *ngIf="showOperate" class="img-viewer-panel-header-operation">
+        <span *ngIf="zoom" (click)="zoomInImg()">+</span>
+        <span *ngIf="zoom" (click)="zoomOutImg()">-</span>
+        <span *ngIf="rotate" (click)="rotateImg(false)">RL</span>
+        <span *ngIf="rotate" (click)="rotateImg(true)">RR</span>
+        <span *ngIf="reset" (click)="showImg()">Reset</span>
+        <span *ngIf="fullscreen" (click)="fullscreenImg()">FS</span>
+        <span *ngIf="download" (click)="downloadImg()">D</span>
+      </div>
+    </div>
+    <div
+      class="img-viewer-panel-body"
+      [class.img-viewer-panel-body-has-footer]="images.length > 1"
+    >
+      <div class="img-viewer-panel-body-content"></div>
+      <span
+        *ngIf="images.length > 1"
+        class="img-viewer-panel-body-prev"
+        (click)="prevImg()"
+        ><p>L</p></span
+      >
+      <span
+        *ngIf="images.length > 1"
+        class="img-viewer-panel-body-next"
+        (click)="nextImg()"
+        ><p>R</p></span
+      >
+    </div>
+    <div *ngIf="images.length > 1" class="img-viewer-panel-footer">
+      {{ currentImgIndex }} / {{ imgTotal }}
+    </div>
+  </div>
+</div>
