@@ -18,7 +18,7 @@ import { ImgViewerType } from './interfaces/img-viewer.type';
 import { IvViewerType } from './interfaces/iv-viewer.type';
 
 @Component({
-  selector: 'nz-picture-viewer',
+  selector: 'ngx-image-viewer',
   templateUrl: './img-viewer.component.html',
   styleUrls: ['./img-viewer.component.scss'],
 })
