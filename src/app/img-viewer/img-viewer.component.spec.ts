@@ -107,4 +107,14 @@ describe('ImgViewerComponent', () => {
       expect(spy).toHaveBeenCalled();
     });
   });
+
+  describe('Download Image', () => {
+    it('Download Image', () => {
+      component.zoomValue = 60;
+      fixture.detectChanges();
+      spy = spyOn(component, 'downloadImg');
+      component.downloadImg();
+      expect(spy).toHaveBeenCalled();
+    });
+  });
 });
